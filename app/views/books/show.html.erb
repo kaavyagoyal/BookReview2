@@ -2,6 +2,7 @@
   <div class="float-end">
     <%= link_to "Edit", edit_book_path(@book), class: "btn btn-primary" %>
     <%= link_to "Delete", book_path(@book), class: "btn btn-primary", data: {method: :delete, confirm: "Are you sure?"} %>
+    <%= link_to "Back",book_path(@book), class: "btn btn-primary" %>
   </div>
 </h2>
 <hr>
@@ -11,8 +12,8 @@
  	<div class="card-body">
   	<div class="book-title"><%= @book.title %></div>
 
- 		<h5 class="card-title"><%= image_tag 'book1.jpg', alt: 'Image', class: "img-fluid" %>
- 		</h5>
+ 		<div class="card-title"><%= image_tag 'book1.jpg', alt: 'Image', class: "img-fluid" %>
+ 		</div>
    	<div class="book-author"><%= @book.author %></div>
 
  	</div>
@@ -28,13 +29,13 @@
 	.book-title{
 		position: relative;
     top: 120px;
-    left: 120px;
-    font-size: 18px;
+    left: 95px;
+    font-size: 9px;
 	}
 	.book-author{
 		position: relative;
     bottom: 75px;
-    left: 235px;
+    left: 190px;
     font-size: 11px;
 	}
 </style>
