@@ -8,6 +8,7 @@ gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 gem 'bootstrap', '~> 5.1.3'
 gem 'devise'
 gem 'acts_as_votable'
+gem "font-awesome-rails"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
