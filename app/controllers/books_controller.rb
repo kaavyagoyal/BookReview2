@@ -41,11 +41,7 @@ def downvote
     
   end
 
-
-
-
-
-	def destroy
+def destroy
 		@book = Book.find(params[:id])
 		@book.destroy
 
