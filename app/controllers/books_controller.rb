@@ -34,26 +34,41 @@ class BooksController < ApplicationController
 		end
 	end
 
-def downvote
+   def destroy
+     @book = Book.find(params[:id])
+	 @book.destroy
+     redirect_to root_path
+   end
+
+   def like
     @book = Book.find(params[:id])
-    @book.downvote_from current_user
-    redirect_to books_path
-    
+    @book.liked_by current_user
+    respond_to do |format|
+      format.html { redirect_back(fallback_location: root_path) }
+      format.js { render layout: false }
+    end
   end
 
-def destroy
-		@book = Book.find(params[:id])
-		@book.destroy
-
-		 redirect_to root_path
-	end
-
-
-	def upvote
+  def dislike
     @book = Book.find(params[:id])
-    @book.upvote_from current_user
-    redirect_to books_path
+    @book.disliked_by current_user
+    respond_to do |format|
+      format.html { redirect_back(fallback_location: root_path) }
+      format.js { render layout: false }
+    end
   end
+
+  #  def upvote
+  #   @book = Book.find(params[:id])
+  #   @book.upvote_from current_user
+  #   redirect_to books_path
+  # end
+
+  # def downvote
+  #   @book = Book.find(params[:id])
+  #   @book.downvote_from current_user
+  #   redirect_to books_path 
+  # end
 
 	private
 	def book_params

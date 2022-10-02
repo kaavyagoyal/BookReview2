@@ -5,8 +5,8 @@ Rails.application.routes.draw do
  root "books#index"
  resources :books do
   member do 
-    get "like" => "books#upvote"
-    get "dislike" => "books#downvote"
+    get "like" => "books#like"
+    get "dislike" => "books#dislike"
   end
  end
  devise_for :users

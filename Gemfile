@@ -10,6 +10,7 @@ gem 'devise'
 gem 'acts_as_votable'
 gem "font-awesome-rails"
 gem 'activeadmin'
+gem 'jquery-rails'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"

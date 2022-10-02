@@ -1,4 +1,7 @@
 {
   "name": "app",
-  "private": "true"
+  "private": "true",
+  "dependencies": {
+    "jquery": "^3.6.1"
+  }
 }
